@@ -122,7 +122,7 @@
 
             bindings = <
   &kp LBRC   &kp AMPS  &kp ASTRK  &kp LPAR   &kp RBRC   &trans  &trans  &none   &none      &none      &none     &none
-  &kp COLON  &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS   &trans  &trans  &none   &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
+  &kp COLON  &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS   &tog 4  &tog 4  &none   &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
   &kp TILDE  &kp EXCL  &kp AT     &kp HASH   &kp PIPE                   &none   &none      &none      &none     &none
                        &kp LPAR   &kp RPAR   &kp UNDER                  &trans  &trans     &trans
             >;
