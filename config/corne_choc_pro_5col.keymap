@@ -68,10 +68,10 @@
             //                       |     |     |     |             |     |     |     |
 
             bindings = <
-  &none     &none     &none      &none      &none   &trans    &trans    &none     &none     &none      &none      &none
-  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none   &kp LALT  &kp RALT  &kp CAPS  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT
-  &none     &none     &none      &none      &none                       &kp INS   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END
-                      &trans     &trans     &trans                      &trans    &trans    &trans
+  &none     &none     &none      &none      &none   &trans  &trans  &none     &none     &none      &none      &none
+  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none   &tog 1  &tog 1  &kp CAPS  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT
+  &none     &none     &none      &none      &none                   &kp INS   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END
+                      &trans     &trans     &trans                  &trans    &trans    &trans
             >;
         };
 
