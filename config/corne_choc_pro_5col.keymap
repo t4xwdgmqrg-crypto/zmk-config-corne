@@ -32,8 +32,6 @@
 
 &msc { acceleration-exponent = <1>; };
 
-&tog { toggle-mode = "on"; };
-
 / {
     chosen { zmk,physical-layout = &five_col_layout; };
 
@@ -43,6 +41,14 @@
         layer6 {
             bindings = <&tog 6>;
             key-positions = <24 33>;
+        };
+    };
+
+    behaviors {
+        toggleon: toggleon {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "TOGGLEON";
+            #binding-cells = <1>;
         };
     };
 
@@ -173,10 +179,10 @@
         MOUSE {
             display-name = "EXTRA 1";
             bindings = <
-  &trans        &trans        &trans            &trans          &trans  &trans  &trans  &trans     &mmv MOVE_X(-600)  &mmv MOVE_Y(-600)  &mmv MOVE_Y(600)  &mmv MOVE_X(600)
-  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans  &tog 7  &tog 7  &trans     &mmv MOVE_LEFT     &mmv MOVE_DOWN     &mmv MOVE_UP      &mmv MOVE_RIGHT
-  &trans        &trans        &trans            &trans          &trans                  &trans     &msc SCRL_LEFT     &msc SCRL_DOWN     &msc SCRL_UP      &msc SCRL_RIGHT
-                              &trans            &trans          &trans                  &mkp RCLK  &mkp LCLK          &mkp MCLK
+  &trans        &trans        &trans            &trans          &trans  &trans  &trans       &trans     &mmv MOVE_X(-600)  &mmv MOVE_Y(-600)  &mmv MOVE_Y(600)  &mmv MOVE_X(600)
+  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans  &to 7   &toggleon 7  &trans     &mmv MOVE_LEFT     &mmv MOVE_DOWN     &mmv MOVE_UP      &mmv MOVE_RIGHT
+  &trans        &trans        &trans            &trans          &trans                       &trans     &msc SCRL_LEFT     &msc SCRL_DOWN     &msc SCRL_UP      &msc SCRL_RIGHT
+                              &trans            &trans          &trans                       &mkp RCLK  &mkp LCLK          &mkp MCLK
             >;
         };
 
