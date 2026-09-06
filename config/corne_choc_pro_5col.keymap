@@ -26,6 +26,8 @@
     tapping-term-ms = <200>;
 };
 
+&mmv { acceleration-exponent = <2>; };
+
 / {
     chosen { zmk,physical-layout = &five_col_layout; };
 
@@ -35,18 +37,6 @@
         layer6 {
             bindings = <&tog 6>;
             key-positions = <24 33>;
-        };
-    };
-
-    behaviors {
-        FAST_MOUSE: FAST_MOUSE {
-            compatible = "zmk,behavior-input-two-axis";
-            label = "FAST_MOUSE";
-            #binding-cells = <1>;
-            acceleration-exponent = <2>;
-            time-to-max-speed-ms = <300>;
-            y-input-code = <1200>;
-            x-input-code = <1200>;
         };
     };
 
@@ -177,10 +167,10 @@
         MOUSE {
             display-name = "EXTRA 1";
             bindings = <
-  &trans        &trans        &trans            &trans          &trans  &trans  &trans  &trans     &mmv MOVE_X(-600)      &mmv MOVE_Y(-600)      &mmv MOVE_Y(600)     &mmv MOVE_X(600)
-  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans  &tog 7  &tog 7  &trans     &FAST_MOUSE MOVE_LEFT  &FAST_MOUSE MOVE_DOWN  &FAST_MOUSE MOVE_UP  &FAST_MOUSE MOVE_RIGHT
-  &trans        &trans        &trans            &trans          &trans                  &trans     &msc SCRL_LEFT         &msc SCRL_DOWN         &msc SCRL_UP         &msc SCRL_RIGHT
-                              &trans            &trans          &trans                  &mkp RCLK  &mkp LCLK              &mkp MCLK
+  &trans        &trans        &trans            &trans          &trans  &trans  &trans  &trans     &mmv MOVE_X(-600)  &mmv MOVE_Y(-600)  &mmv MOVE_Y(600)  &mmv MOVE_X(600)
+  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans  &tog 7  &tog 7  &trans     &none              &none              &none             &none
+  &trans        &trans        &trans            &trans          &trans                  &trans     &msc SCRL_LEFT     &msc SCRL_DOWN     &msc SCRL_UP      &msc SCRL_RIGHT
+                              &trans            &trans          &trans                  &mkp RCLK  &mkp LCLK          &mkp MCLK
             >;
         };
 
