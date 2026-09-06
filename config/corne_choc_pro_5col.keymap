@@ -59,8 +59,8 @@
 
             bindings = <
   &kp Q       &kp W            &kp E        &kp R                &kp T      &tog 8      &to 0         &kp Y        &kp U                &kp I        &kp O                 &kp P
-  &mt LGUI A  &mt LALT S       &mt LCTRL D  &mt LSHFT F          &kp G      &bl BL_TOG  &kp CAPSLOCK  &kp H        &mt RSHFT J          &mt RCTRL K  &mt RALT L            &mt RGUI SQT
-  &kp Z       &mt X RIGHT_ALT  &kp C        &mt LS(RIGHT_ALT) V  &kp B                                &kp N        &mt LS(RIGHT_ALT) M  &kp COMMA    &mt RIGHT_ALT PERIOD  &kp FSLH
+  &mt LGUI A  &mt LALT S       &mt LCTRL D  &mt LSHFT F          &kp G      &bl BL_TOG  &kp CAPSLOCK  &kp H        &mt RSHFT J          &mt RCTRL K  &mt LEFT_ALT L        &mt RGUI SQT
+  &kp Z       &mt RIGHT_ALT X  &kp C        &mt LS(RIGHT_ALT) V  &kp B                                &kp N        &mt LS(RIGHT_ALT) M  &kp COMMA    &mt RIGHT_ALT PERIOD  &kp FSLH
                                &lt 5 ESC    &lt NAV SPACE        &lt 7 TAB                            &lt SYM RET  &lt NUM BSPC         &lt 2 DEL
             >;
 
