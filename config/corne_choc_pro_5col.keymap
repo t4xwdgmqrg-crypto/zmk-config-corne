@@ -28,7 +28,10 @@
     tapping-term-ms = <200>;
 };
 
-&mmv { acceleration-exponent = <1>; };
+&mmv {
+    acceleration-exponent = <2>;
+    time-to-max-speed-ms = <300>;
+};
 
 &msc { acceleration-exponent = <1>; };
 
@@ -41,14 +44,6 @@
         layer6 {
             bindings = <&tog 6>;
             key-positions = <24 33>;
-        };
-    };
-
-    behaviors {
-        toggleon: toggleon {
-            compatible = "zmk,behavior-toggle-layer";
-            label = "TOGGLEON";
-            #binding-cells = <1>;
         };
     };
 
@@ -169,20 +164,20 @@
             //                       |     |     |     |         |     |     |     |
 
             bindings = <
-  &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &kp C_MUTE  &kp C_PP  &bt BT_SEL 4     &none            &none            &none  &none
-  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &kp LALT    &kp RALT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_TOG  &none  &none
-  &sys_reset       &bootloader      &studio_unlock   &none            &none                                  &none            &none            &none            &none  &none
-                                    &trans           &trans           &trans                                 &trans           &trans           &trans
+  &none  &none   &none   &none   &none   &trans  &trans  &none   &none   &none   &none   &none
+  &none  &none   &none   &none   &none   &trans  &trans  &none   &none   &none   &none   &none
+  &none  &tog 1  &tog 3  &tog 7  &none                   &none   &tog 1  &tog 3  &tog 7  &none
+                 &trans  &trans  &trans                  &trans  &trans  &trans
             >;
         };
 
         MOUSE {
             display-name = "EXTRA 1";
             bindings = <
-  &trans        &trans        &trans            &trans          &trans  &trans  &trans       &trans     &mmv MOVE_X(-600)  &mmv MOVE_Y(-600)  &mmv MOVE_Y(600)  &mmv MOVE_X(600)
-  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans  &to 7   &toggleon 7  &trans     &mmv MOVE_LEFT     &mmv MOVE_DOWN     &mmv MOVE_UP      &mmv MOVE_RIGHT
-  &trans        &trans        &trans            &trans          &trans                       &trans     &msc SCRL_LEFT     &msc SCRL_DOWN     &msc SCRL_UP      &msc SCRL_RIGHT
-                              &trans            &trans          &trans                       &mkp RCLK  &mkp LCLK          &mkp MCLK
+  &trans        &trans        &trans            &trans          &trans  &trans  &trans  &trans     &mmv MOVE_X(-600)  &mmv MOVE_Y(600)  &mmv MOVE_Y(-600)  &mmv MOVE_X(600)
+  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans  &trans  &trans  &trans     &mmv MOVE_LEFT     &mmv MOVE_DOWN    &mmv MOVE_UP       &mmv MOVE_RIGHT
+  &trans        &trans        &trans            &trans          &trans                  &trans     &msc SCRL_LEFT     &msc SCRL_DOWN    &msc SCRL_UP       &msc SCRL_RIGHT
+                              &trans            &trans          &trans                  &mkp RCLK  &mkp LCLK          &mkp MCLK
             >;
         };
 
