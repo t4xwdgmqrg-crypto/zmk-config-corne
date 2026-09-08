@@ -47,6 +47,26 @@
         };
     };
 
+    behaviors {
+        modbootloader: modbootloader {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MODBOOTLOADER";
+            bindings = <&none>, <&modbootloader>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT)>;
+        };
+
+        modsysreset: modsysreset {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MODSYSRESET";
+            bindings = <&none>, <&none>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -60,10 +80,10 @@
             //              | ESC/MEDIA | SPACE/NAV | TAB/FUN | RET/SYM | BSPC/NUM | DEL/ADJ |
 
             bindings = <
-  &kp Q       &kp W            &kp E        &kp R                &kp T      &to 8  &to 0   &kp Y        &kp U                &kp I        &kp O                 &kp P
-  &mt LGUI A  &mt LALT S       &mt LCTRL D  &mt LSHFT F          &kp G      &mo 6  &tog 6  &kp H        &mt RSHFT J          &mt RCTRL K  &mt LEFT_ALT L        &mt RGUI SQT
-  &kp Z       &mt RIGHT_ALT X  &kp C        &mt LS(RIGHT_ALT) V  &kp B                     &kp N        &mt LS(RIGHT_ALT) M  &kp COMMA    &mt RIGHT_ALT PERIOD  &kp FSLH
-                               &lt 5 ESC    &lt NAV SPACE        &lt 7 TAB                 &lt SYM RET  &lt NUM BSPC         &lt 2 DEL
+  &kp Q       &kp W            &kp E        &kp R                &kp T      &to 8  &to 0  &kp Y        &kp U                &kp I        &kp O                 &kp P
+  &mt LGUI A  &mt LALT S       &mt LCTRL D  &mt LSHFT F          &kp G      &mo 6  &mo 6  &kp H        &mt RSHFT J          &mt RCTRL K  &mt LEFT_ALT L        &mt RGUI SQT
+  &kp Z       &mt RIGHT_ALT X  &kp C        &mt LS(RIGHT_ALT) V  &kp B                    &kp N        &mt LS(RIGHT_ALT) M  &kp COMMA    &mt RIGHT_ALT PERIOD  &kp FSLH
+                               &lt 5 ESC    &lt NAV SPACE        &lt 7 TAB                &lt SYM RET  &lt NUM BSPC         &lt 2 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -164,10 +184,10 @@
             //                       |     |     |     |         |     |     |     |
 
             bindings = <
-  &none  &none   &none   &none   &none   &trans  &trans  &none   &none   &none   &none   &none
-  &none  &none   &none   &none   &none   &trans  &trans  &none   &none   &none   &none   &none
-  &none  &tog 1  &tog 3  &tog 7  &none                   &none   &tog 1  &tog 3  &tog 7  &none
-                 &trans  &trans  &trans                  &trans  &trans  &trans
+  &modbootloader  &modsysreset  &mt LS(RIGHT_ALT) C_AC_NEXT_KEYBOARD_LAYOUT_SELECT  &none   &none   &trans  &trans  &none   &none   &none   &modsysreset  &modbootloader
+  &none           &none         &none                                               &none   &none   &trans  &trans  &none   &none   &none   &none         &none
+  &none           &tog 1        &tog 3                                              &tog 7  &none                   &none   &tog 1  &tog 3  &tog 7        &none
+                                &trans                                              &trans  &trans                  &trans  &trans  &trans
             >;
         };
 
