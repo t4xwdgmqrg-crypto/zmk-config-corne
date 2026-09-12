@@ -184,10 +184,10 @@
             //                       |     |     |     |         |     |     |     |
 
             bindings = <
-  &modbootloader  &modsysreset  &mt LS(RIGHT_ALT) C_AC_NEXT_KEYBOARD_LAYOUT_SELECT  &none   &none   &trans  &trans  &none   &none   &none   &modsysreset  &modbootloader
-  &none           &none         &none                                               &none   &none   &trans  &trans  &none   &none   &none   &none         &none
-  &none           &tog 1        &tog 3                                              &tog 7  &none                   &none   &tog 1  &tog 3  &tog 7        &none
-                                &trans                                              &trans  &trans                  &trans  &trans  &trans
+  &modbootloader  &modsysreset  &mt LS(RIGHT_ALT) GLOBE  &none   &none   &trans  &trans  &none   &none   &kp GLOBE  &modsysreset  &modbootloader
+  &none           &none         &tog 5                   &tog 8  &none   &trans  &trans  &none   &none   &tog 5     &tog 8        &none
+  &none           &tog 1        &tog 3                   &tog 7  &none                   &none   &tog 1  &tog 3     &tog 7        &none
+                                &trans                   &trans  &trans                  &trans  &trans  &trans
             >;
         };
 
