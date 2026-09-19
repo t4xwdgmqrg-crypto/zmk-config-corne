@@ -167,10 +167,10 @@
             //                       |     |     |     |             |     |     |     |
 
             bindings = <
-  &kp F12  &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN  &trans  &trans  &kp PSCRN        &kp F7  &kp F8  &kp F9  &kp F12
-  &kp F11  &kp F4  &kp F5  &kp F6  &kp SCROLLLOCK   &tog 5  &to 5   &kp SLCK         &kp F4  &kp F5  &kp F6  &kp F11
-  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK                  &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10
-                   &trans  &trans  &trans                           &trans           &trans  &trans
+  &kp F12  &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN  &trans  &trans  &kp PSCRN        &kp LG(LA(N7))        &kp LG(LA(N8))        &kp LG(N9)            &kp F15
+  &kp F11  &kp F4  &kp F5  &kp F6  &kp SCROLLLOCK   &tog 5  &to 5   &kp SLCK         &kp LA(LG(N5))        &kp LG(LA(N5))        &kp LG(LA(F6))        &kp F14
+  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK                  &kp PAUSE_BREAK  &kp LA(LG(NUMBER_1))  &kp LG(LA(NUMBER_2))  &kp LG(LA(NUMBER_3))  &kp F13
+                   &trans  &trans  &trans                           &trans           &trans                &trans
             >;
         };
 
