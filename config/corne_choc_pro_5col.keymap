@@ -65,6 +65,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LSFT)>;
         };
+
+        zoom: zoom {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ZOOM";
+            bindings = <&kp RG(MINUS)>, <&kp RG(EQUAL)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
     };
 
     keymap {
@@ -186,7 +195,7 @@
             bindings = <
   &modbootloader  &modsysreset  &mt LS(RIGHT_ALT) GLOBE  &none   &none   &trans  &trans  &none   &none   &kp GLOBE  &modsysreset  &modbootloader
   &none           &none         &tog 5                   &tog 8  &none   &trans  &trans  &none   &none   &tog 5     &tog 8        &none
-  &none           &tog 1        &tog 3                   &tog 7  &none                   &none   &tog 1  &tog 3     &tog 7        &none
+  &none           &tog 1        &tog 3                   &tog 9  &none                   &none   &tog 1  &tog 3     &tog 9        &none
                                 &trans                   &trans  &trans                  &trans  &trans  &trans
             >;
         };
