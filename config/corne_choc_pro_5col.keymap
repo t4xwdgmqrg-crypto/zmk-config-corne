@@ -204,20 +204,20 @@
         GAMING {
             display-name = "EXTRA 2";
             bindings = <
-  &kp Q  &kp W  &kp E    &kp R      &kp T    &kp LEFT_SHIFT  &to 8  &kp Y         &kp U         &kp I         &kp O   &kp P
-  &kp A  &kp S  &kp D    &kp F      &kp G    &to 0           &to 0  &kp H         &kp J         &kp K         &kp L   &kp N7
-  &kp Z  &kp X  &kp C    &kp V      &kp B                           &kp N         &kp M         &kp NUMBER_4  &kp N5  &kp NUMBER_6
-                &kp ESC  &kp SPACE  &kp TAB                         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3
+  &kp Q  &kp W  &kp E    &kp R      &kp T    &to 0  &to 8  &kp Y         &kp U         &kp I         &kp O   &kp P
+  &kp A  &kp S  &kp D    &kp F      &kp G    &to 0  &to 0  &kp H         &kp J         &kp K         &kp L   &kp N7
+  &kp Z  &kp X  &kp C    &kp V      &kp B                  &kp N         &kp M         &kp NUMBER_4  &kp N5  &kp NUMBER_6
+                &kp ESC  &kp SPACE  &kp TAB                &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3
             >;
         };
 
         MOUSE {
             display-name = "EXTRA 1";
             bindings = <
-  &mmv (MOVE_X(-600))  &mmv MOVE_Y(600)  &mmv (MOVE_Y(-600))  &mmv MOVE_X(600)  &kp SPACE      &to 0  &tog 7  &kp RG(X)  &mmv (MOVE_X(-600))  &mmv MOVE_Y(600)  &mmv (MOVE_Y(-600))  &mmv MOVE_X(600)
-  &kp LEFT_GUI         &kp LEFT_ALT      &kp RCTRL            &kp LEFT_SHIFT    &kp RG(Z)      &zoom  &zoom   &kp RG(V)  &mmv MOVE_LEFT       &mmv MOVE_DOWN    &mmv MOVE_UP         &mmv MOVE_RIGHT
-  &msc SCRL_LEFT       &msc SCRL_DOWN    &msc SCRL_UP         &msc SCRL_RIGHT   &kp LS(LG(Z))                 &kp RG(C)  &msc SCRL_LEFT       &msc SCRL_DOWN    &msc SCRL_UP         &msc SCRL_RIGHT
-                                         &mkp RCLK            &mkp LCLK         &mkp MCLK                     &mkp RCLK  &mkp LCLK            &mkp MCLK
+  &mmv (MOVE_X(-600))  &mmv MOVE_Y(600)  &mmv (MOVE_Y(-600))  &mmv MOVE_X(600)  &kp SPACE  &to 0  &tog 7  &kp RG(X)  &mmv (MOVE_X(-600))  &mmv MOVE_Y(600)  &mmv (MOVE_Y(-600))  &mmv MOVE_X(600)
+  &kp LEFT_GUI         &kp LEFT_ALT      &kp RCTRL            &kp LEFT_SHIFT    &kp RG(Z)  &zoom  &zoom   &kp RG(V)  &mmv MOVE_LEFT       &mmv MOVE_DOWN    &mmv MOVE_UP         &mmv MOVE_RIGHT
+  &msc SCRL_LEFT       &msc SCRL_DOWN    &msc SCRL_UP         &msc SCRL_RIGHT   &kp TAB                   &kp RG(C)  &msc SCRL_LEFT       &msc SCRL_DOWN    &msc SCRL_UP         &msc SCRL_RIGHT
+                                         &mkp RCLK            &mkp LCLK         &mkp MCLK                 &mkp RCLK  &mkp LCLK            &mkp MCLK
             >;
         };
     };
